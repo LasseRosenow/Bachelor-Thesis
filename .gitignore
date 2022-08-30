@@ -1,0 +1,6 @@
+out/*
+!out/thesis.pdf
+
+textidote.jar
+report.html
+indent.log

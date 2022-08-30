@@ -1,0 +1,96 @@
+\documentclass[
+  a4paper,            % DIN A4
+  DIV=10,             % Schriftgröße und Satzspiegel
+  oneside,            % einseitiger Druck
+  BCOR=5mm,           % Bindungskorrektur
+  parskip=half,       % Halber Abstand zwischen Absätzen
+  numbers=noenddot,   % Kein Punkt hinter Kapitelnummern
+  bibtotoc,           % Literaturverzeichnis im Inhaltsverzeichnis
+  listof=totoc        % Abbildungs- und Tabellenverzeichnis im Inhaltsverzeichnis
+]{scrreprt}
+\usepackage{style/thesisstyle}
+
+\makeglossaries           % create all glossary entries (remember: run makeglossaries manually)
+\loadglsentries{thesisglossaries.tex}  % load acronym, symbol and glossary entries
+
+\sisetup{locale = UK}     % siunitx locale setup
+%\DeclareSIUnit \fps{fps}  % a custom unit (usage: \SI{24}{\fps})
+
+\begin{document}
+\input{configuration/configuration}    % load all settings
+
+\hyphenation{Ba-che-lor-the-sis Mas-ter-the-sis}
+
+% Cover page here, no page number
+\ICoverPage
+
+% PDF Metadata
+\input{style/metadata}
+
+% Titlepage is page one even if the number is not shown.
+\pagenumbering{roman}
+% Title page here
+\input{style/titlepage}
+
+% Abstract page here
+\input{style/abstractpage}
+
+% Table of contents here
+\tableofcontents
+
+% List of figures here
+\IListOfFigures
+
+% List of tables here
+\IListOfTables
+
+% List of listings here
+\IListOfListings
+
+% List of acronyms here
+\IListOfAccronyms
+
+% List of symbols here
+\IListOfSymbols
+
+% Uncomment if list of source code is needed (rarely).
+%\lstlistoflistings  % requires package listings, needs to uncommenting of usepackage
+
+% path to the folder is set to find the images used there
+\graphicspath{ {assets/diagrams/}{assets/drawio/generated/} }
+
+% Chapters
+\clearpage
+\pagenumbering{arabic}
+\input{chapters/01_introduction}
+\input{chapters/02_background}
+\input{chapters/03_requirements}
+\input{chapters/04_related_work}
+\input{chapters/05_design}
+\input{chapters/06_implementation}
+\input{chapters/07_testing}
+\input{chapters/08_evaluation}
+\input{chapters/09_future_work}
+\input{chapters/10_conclusion}
+% Add additional chapters here
+
+%\bibliographystyle{plain}
+\bibliographystyle{IEEEtran}
+\bibliography{
+  literature/general,
+  literature/bib/iot,
+  literature/bib/ids,
+  literature/bib/rfcs,
+  literature/bib/own,
+  literature/bib/programming
+}
+
+% Appendix
+% \appendix
+% \input{appendix/example_appendix}
+
+\IGlossary
+
+\Istatement
+
+\end{document}

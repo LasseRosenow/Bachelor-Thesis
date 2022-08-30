@@ -1,0 +1,53 @@
+\chapter{Introduction}
+\label{chapter:introduction}
+
+\section{Context}
+\label{sec:introduction:context}
+
+For constrained devices, it can be important not only to set certain configurations
+before compiling and flashing a device but also while the device is in full operation, for example to change the rate or precision of a measurement or to update authentication credentials.
+Also, it is often required to persist these values, so that a device would keep its configuration after a restart caused by a firmware update or power shortage for example.
+It is also a common requirement to change these runtime configuration parameters via an external \gls{gl:configuration_manager} that communicates with the constrained device through \acrshort{ac:wlan}, Bluetooth, a serial bus, etc.
+Not only smart home, but also more and more smart city applications require this external configuration management to be based on a standardized protocol such as \gls{gl:lwm2m} \cite{oma-lwm2m-core-12}, or the proprietary ``matter'' standard \cite{matter_standard} in smart home applications.
+Using a standardized protocol gives the advantage of being able to automatically integrate a node into already existing systems without the need to write custom wrappers and also having the freedom to replace them with compatible devices implementing the same protocol.
+
+\section{The Problem of Runtime Configuration in \gls*{gl:riot_os}}
+\label{sec:introduction:problem}
+
+As of today, there is no official way within \gls{gl:riot_os} \cite{bghkl-rosos-18} for modules to expose runtime configurable parameters, as can be seen in its official documentation \cite{riot_documentation}.
+As a consequence, every application needs to implement its own way to work around this, causing a lot of duplicated work for all vendors using \gls{gl:riot_os} and also leading to large inconsistencies in their custom implementations making it impossible to easily integrate different devices.
+For example, if there is a smart bulb vendor ``A'' and a smart bulb vendor ``B'', which both need to be controlled by a control unit made by vendor ``C'', this control unit would need to implement the custom \gls{ac:api} of vendor ``A'' and vendor ``B''.
+Causing not only a huge amount of unnecessary work for vendor ``A'' and vendor ``B'' but also vendor ``C''.
+
+\section{Thesis Aims and Objectives}
+\label{sec:introduction:aims_and_objectives}
+
+In this thesis we aim to investigate how to design an architecture that will extend the \gls{gl:riot_os} so that modules can expose configuration parameters in a way that they can easily integrate with external management tools such as \gls{gl:lwm2m}.
+We also want to persist these values beyond device restarts.
+
+\section{Thesis Structure}
+\label{sec:introduction:structure}
+
+In \autoref{chapter:background} we start by explaining the importance of configuration for constrained devices and the differences between static and runtime configuration.
+Furthermore, we discuss why it is beneficial to implement this feature on an operating system level instead of per application.
+
+In \autoref{chapter:requirements} we explain what kind of requirements the new \nameref{sec:design:riot_registry} is supposed to fulfill and discuss why these requirements are needed.
+
+In \autoref{chapter:related_work} we first present existing academic work and discuss similarities and differences to our requirements.
+Then we present existing implementation work and analyze in how much each of it fulfills the in \autoref{chapter:requirements} explained requirements.
+After that, we conclude if one of the previously assessed work already fulfills enough requirements to just be implemented inside \gls{gl:riot_os} as its official \gls{ac:rcs}, or if the architecture for the \nameref{sec:design:riot_registry} will only be based on one of the previously analyzed work but extend its functionality, or if a completely new architecture needs to be designed and implemented.
+
+In \autoref{chapter:design} we present the design of the \nameref{sec:design:riot_registry} that fulfills all the requirements from \autoref{chapter:requirements}.
+We explain all the behavioral aspects, \gls{ac:api} decisions, and how the specific requirements from \autoref{chapter:requirements} are fulfilled.
+
+In \autoref{chapter:implementation} we explain the implementation of the in \autoref{chapter:design} presented architecture, going more into detail as to how and why the more technical decisions of the \gls{ac:api} design were made.
+
+In \autoref{chapter:testing} we explain how the correctness of the main \gls{ac:api} functions of the in \autoref{chapter:implementation} implemented source code is tested.
+
+In \autoref{chapter:evaluation} we evaluate the overhead of the \nameref{sec:design:riot_registry} implementation (see \autoref{chapter:implementation}).
+First, we measure the stack consumption of the main \nameref{sec:design:riot_registry} functions, then we discuss the results of these measurements.
+Second, we measure the ROM size of the \nameref{sec:design:riot_registry} implementation and also discuss our findings.
+
+In \autoref{chapter:future_work} we explain which steps are next to continue on the work of this thesis and how to further iterate upon it.
+
+In \autoref{chapter:conclusion} we conclude on how successful this work is in fulfilling its aims set in \autoref{sec:introduction:aims_and_objectives} and more specifically in \autoref{chapter:requirements} and reflect on what lessons we have learned in the process.

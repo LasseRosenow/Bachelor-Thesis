@@ -1,0 +1,20 @@
+\chapter{Conclusion}
+\label{chapter:conclusion}
+
+Our main goal of this thesis to specify a runtime configuration registry for \gls{gl:riot_os} has been achieved (see \autoref{chapter:design}).
+The implementation (see \autoref{chapter:implementation}) has also been successful and fulfills all the requirements specified in \autoref{chapter:requirements}.
+
+Looking back and around to see what has already been done prior to this thesis in \autoref{chapter:related_work} has been very helpful for us to get an overview of in what ways \glspl{ac:rcs} have been designed so far and for which use-cases.
+Thinking about the use-cases of already existing solutions helped in specifying use-cases and requirements that are relevant to fulfill, for the \gls{gl:riot_os} implementation even if the related work was not exactly what is needed for a \gls{gl:riot_os} \gls{ac:rcs}.
+This in turn helped us to assess how much the in \autoref{chapter:related_work} assessed already existing implementations are capable of fulfilling these \gls{gl:riot_os}-specific requirements (see \autoref{chapter:requirements} and \autoref{chapter:related_work} \autoref{sec:related_work:assessment_of_implementation_work_on_thesis_requirements}).
+We learned that none of the assessed already existing implementations fulfill all the requirements of \autoref{chapter:requirements}, but we were able to base the new \nameref{sec:design:riot_registry} on the existing \gls{ac:mynewt_config} implementation for \gls{gl:riot_os}, which helped speed up the development process by a lot.
+Our final design (see \autoref{chapter:design}) turned out much different to from where it started (\gls{ac:mynewt_config}), but the main \gls{ac:api} functions are still roughly the same.
+
+Writing unit tests (see \autoref{chapter:testing}) helped not only finding a lot of bugs in the \nameref{sec:design:riot_registry} implementation, but also helped in creating new ones while further iterating on the \nameref{sec:design:riot_registry}'s implementation.
+Which is why, it is of high importance to further increase the testing coverage as mentioned in \autoref{chapter:future_work}.
+
+\autoref{chapter:evaluation} showed us that our implementation's overhead is acceptable for devices with enough memory (stack overhead up to > 4 kilobyte) and it does not perform any dynamic heap allocations, but there are still many ways to further reduce its stack overhead.
+
+For the future it will be very interesting to see how good the new \nameref{sec:design:riot_registry} can specify \glspl{ac:cs} that abstract common configuration parameters shared by the many \gls{gl:riot_os} modules and drivers (see \autoref{sec:future_work:specification_of_schemas_for_common_use_cases}).
+
+\nocite{never_gonna_give_you_up}

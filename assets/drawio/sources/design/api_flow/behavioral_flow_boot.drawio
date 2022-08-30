@@ -1,0 +1,94 @@
+<mxfile host="65bd71144e">
+    <diagram id="fjN8D4Odn0497USpxgly" name="Page-1">
+        <mxGraphModel dx="1114" dy="777" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#FFFFFF" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="188" value="" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="160" y="240" width="815" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="187" value="" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="160" y="540" width="390" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="186" value="" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="160" y="400" width="390" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="182" value="" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="570" y="250" width="390" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="163" style="edgeStyle=elbowEdgeStyle;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" source="190" target="188" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="230" y="200" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="169" value="" style="edgeStyle=elbowEdgeStyle;html=1;" parent="1" source="188" target="186" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="80" y="440" as="sourcePoint"/>
+                        <Array as="points">
+                            <mxPoint x="230" y="390"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="171" value="do" style="edgeStyle=none;html=1;" parent="1" source="162" target="170" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="178" style="edgeStyle=none;html=1;" parent="1" source="170" target="182" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="580" y="350" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="162" value="Foreach configuration schema as &lt;b&gt;cs&lt;/b&gt;" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
+                    <mxGeometry x="170" y="260" width="140" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="168" value="" style="edgeStyle=elbowEdgeStyle;html=1;elbow=vertical;" parent="1" source="186" target="187" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="230" y="520"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="175" value="do" style="edgeStyle=none;html=1;" parent="1" source="164" target="172" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="164" value="Foreach storage&lt;br&gt;facility as &lt;b&gt;src&lt;/b&gt;" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
+                    <mxGeometry x="170" y="410" width="140" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="167" value="" style="edgeStyle=elbowEdgeStyle;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" source="187" target="189" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="230" y="680" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="174" value="do" style="edgeStyle=none;html=1;" parent="1" source="165" target="173" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="165" value="Get one storage&lt;br&gt;facility as &lt;b&gt;dst&lt;/b&gt;" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
+                    <mxGeometry x="170" y="550" width="140" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="170" value="registry_register_schema(cs)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="345" y="280" width="190" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="172" value="registry_register_storage_src(src)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="350" y="430" width="190" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="173" value="registry_register_storage_dst(dst)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="350" y="570" width="190" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="180" value="do" style="edgeStyle=none;html=1;" parent="1" source="176" target="179" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="176" value="Foreach schema&lt;br&gt;instance as &lt;b&gt;si&lt;br&gt;&lt;/b&gt;" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
+                    <mxGeometry x="580" y="260" width="140" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="179" value="registry_register_schema-&lt;br&gt;_instance(cs, si)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="760" y="280" width="190" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="189" value="main()" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+                    <mxGeometry x="185" y="680" width="90" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="190" value="RIOT Boot" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+                    <mxGeometry x="185" y="160" width="90" height="40" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

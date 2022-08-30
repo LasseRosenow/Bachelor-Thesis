@@ -1,0 +1,40 @@
+<mxfile host="65bd71144e">
+    <diagram id="fjN8D4Odn0497USpxgly" name="Page-1">
+        <mxGraphModel dx="1887" dy="779" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#FFFFFF" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="283" value="my_custom_schema.h" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;shape=mxgraph.azure.code_file;pointerEvents=1;fillColor=#666666;strokeWidth=0;strokeColor=none;dashed=1;" parent="1" vertex="1">
+                    <mxGeometry x="-1120" y="20" width="60" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="284" value="my_custom_schema.c" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;shape=mxgraph.azure.code_file;pointerEvents=1;fillColor=#666666;strokeWidth=0;strokeColor=none;dashed=1;" parent="1" vertex="1">
+                    <mxGeometry x="-1120" y="140" width="60" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="285" style="edgeStyle=elbowEdgeStyle;rounded=0;html=1;" parent="1" source="283" target="287" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-1010" y="-160" as="sourcePoint"/>
+                        <mxPoint x="-960" y="55" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="286" style="edgeStyle=elbowEdgeStyle;rounded=0;html=1;" parent="1" source="284" target="287" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-1050" y="65" as="sourcePoint"/>
+                        <mxPoint x="-960" y="175" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="287" value="registry_register_schema(app, my_custom_schema)" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-950" y="90" width="180" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="288" value="The new custom schema has been registered within the &quot;app&quot; namespace" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="-720" y="79.5" width="150" height="71" as="geometry"/>
+                </mxCell>
+                <mxCell id="289" style="edgeStyle=elbowEdgeStyle;rounded=0;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" source="287" target="288" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-1050" y="185" as="sourcePoint"/>
+                        <mxPoint x="-940" y="125" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

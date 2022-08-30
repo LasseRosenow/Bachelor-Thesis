@@ -1,0 +1,146 @@
+<mxfile host="65bd71144e">
+    <diagram id="fjN8D4Odn0497USpxgly" name="Page-1">
+        <mxGraphModel dx="729" dy="1606" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="158" value="«component»&lt;br&gt;&lt;b&gt;Runtime Configurations&lt;/b&gt;" style="html=1;dropTarget=0;verticalAlign=middle;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="-800" width="800" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="159" value="" style="shape=module;jettyWidth=8;jettyHeight=4;" parent="158" vertex="1">
+                    <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+                        <mxPoint x="-27" y="7" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="162" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;endFill=1;startArrow=block;startFill=1;" parent="1" source="160" target="158" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="160" value="«component»&lt;br&gt;&lt;b&gt;Registry API&lt;/b&gt;" style="html=1;dropTarget=0;verticalAlign=middle;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="-670" width="800" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="161" value="" style="shape=module;jettyWidth=8;jettyHeight=4;" parent="160" vertex="1">
+                    <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+                        <mxPoint x="-27" y="7" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="199" value="" style="group" parent="1" vertex="1" connectable="0">
+                    <mxGeometry x="630" y="-480" width="190" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="178" value="«config manager»&lt;br&gt;&lt;b&gt;LWM2M&lt;br&gt;&lt;/b&gt;" style="html=1;dropTarget=0;verticalAlign=top;fillColor=#fff2cc;strokeColor=#d6b656;" parent="199" vertex="1">
+                    <mxGeometry width="190" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="179" value="" style="shape=module;jettyWidth=8;jettyHeight=4;" parent="178" vertex="1">
+                    <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+                        <mxPoint x="-27" y="7" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="198" value="CoAP" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="199" vertex="1">
+                    <mxGeometry x="10" y="50" width="170" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="217" style="html=1;endArrow=block;endFill=1;edgeStyle=elbowEdgeStyle;startArrow=block;startFill=1;" parent="1" target="160" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="160" y="-540" as="sourcePoint"/>
+                        <mxPoint x="190" y="-600" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="218" style="html=1;endArrow=block;endFill=1;edgeStyle=elbowEdgeStyle;startArrow=block;startFill=1;" parent="1" source="234" target="160" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="450" y="-540" as="sourcePoint"/>
+                        <mxPoint x="445" y="-600" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="445" y="-570"/>
+                            <mxPoint x="440" y="-560"/>
+                            <mxPoint x="450" y="-570"/>
+                            <mxPoint x="440" y="-570"/>
+                            <mxPoint x="445" y="-570"/>
+                            <mxPoint x="445" y="-570"/>
+                            <mxPoint x="460" y="-550"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="219" style="html=1;endArrow=block;endFill=1;edgeStyle=elbowEdgeStyle;startArrow=block;startFill=1;" parent="1" source="236" target="160" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="735" y="-541" as="sourcePoint"/>
+                        <mxPoint x="180" y="-580" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="725" y="-570"/>
+                            <mxPoint x="730" y="-560"/>
+                            <mxPoint x="760" y="-570"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="234" value="Basic Configuration Managers" style="swimlane;dashed=1;strokeColor=#000000;fillColor=none;verticalAlign=middle;startSize=30;fontStyle=0" parent="1" vertex="1">
+                    <mxGeometry x="310" y="-540" width="270" height="380" as="geometry">
+                        <mxRectangle x="310" y="-540" width="190" height="30" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="197" value="" style="group" parent="234" vertex="1" connectable="0">
+                    <mxGeometry x="20" y="50" width="190" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="148" value="«config manager»&lt;br&gt;&lt;b&gt;Config CLI (Riot Shell)&lt;/b&gt;" style="html=1;dropTarget=0;verticalAlign=top;fillColor=#fff2cc;strokeColor=#d6b656;" parent="197" vertex="1">
+                    <mxGeometry width="190" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="149" value="" style="shape=module;jettyWidth=8;jettyHeight=4;" parent="148" vertex="1">
+                    <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+                        <mxPoint x="-27" y="7" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="195" value="Serial" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="197" vertex="1">
+                    <mxGeometry x="10" y="50" width="170" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="180" value="«config manager»&lt;br&gt;&lt;b&gt;CoAP API&lt;br&gt;&lt;/b&gt;" style="html=1;dropTarget=0;verticalAlign=top;fillColor=#fff2cc;strokeColor=#d6b656;" parent="234" vertex="1">
+                    <mxGeometry x="40" y="150" width="190" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="181" value="" style="shape=module;jettyWidth=8;jettyHeight=4;" parent="180" vertex="1">
+                    <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+                        <mxPoint x="-27" y="7" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="239" value="UDP" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="234" vertex="1">
+                    <mxGeometry x="50" y="200" width="170" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="240" value="«config manager»&lt;br&gt;&lt;b&gt;MQTT API&lt;br&gt;&lt;/b&gt;" style="html=1;dropTarget=0;verticalAlign=top;fillColor=#fff2cc;strokeColor=#d6b656;" parent="234" vertex="1">
+                    <mxGeometry x="60" y="250" width="190" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="241" value="" style="shape=module;jettyWidth=8;jettyHeight=4;" parent="240" vertex="1">
+                    <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+                        <mxPoint x="-27" y="7" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="247" value="TCP" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="234" vertex="1">
+                    <mxGeometry x="70" y="300" width="170" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="235" value="Applications / Drivers" style="swimlane;dashed=1;strokeColor=#000000;fillColor=none;verticalAlign=middle;startSize=30;fontStyle=0" parent="1" vertex="1">
+                    <mxGeometry x="40" y="-540" width="240" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="138" value="«application»&lt;br&gt;&lt;b&gt;My app&lt;/b&gt;" style="html=1;dropTarget=0;verticalAlign=top;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="235" vertex="1">
+                    <mxGeometry x="20" y="50" width="160" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="139" value="" style="shape=module;jettyWidth=8;jettyHeight=4;" parent="138" vertex="1">
+                    <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+                        <mxPoint x="-27" y="7" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="165" value="«driver»&lt;br&gt;&lt;b&gt;BME280&lt;/b&gt;" style="html=1;dropTarget=0;verticalAlign=top;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="235" vertex="1">
+                    <mxGeometry x="40" y="90" width="160" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="166" value="" style="shape=module;jettyWidth=8;jettyHeight=4;" parent="165" vertex="1">
+                    <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+                        <mxPoint x="-27" y="7" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="167" value="«driver»&lt;br&gt;&lt;b&gt;WS2812&lt;/b&gt;" style="html=1;dropTarget=0;verticalAlign=top;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="235" vertex="1">
+                    <mxGeometry x="60" y="130" width="160" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="168" value="" style="shape=module;jettyWidth=8;jettyHeight=4;" parent="167" vertex="1">
+                    <mxGeometry x="1" width="20" height="20" relative="1" as="geometry">
+                        <mxPoint x="-27" y="7" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="236" value="Advanced Configuration Managers with custom schemas" style="swimlane;dashed=1;strokeColor=#000000;fillColor=none;verticalAlign=middle;startSize=40;fontStyle=0;whiteSpace=wrap;" parent="1" vertex="1">
+                    <mxGeometry x="610" y="-540" width="230" height="190" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

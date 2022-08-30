@@ -1,0 +1,38 @@
+\chapter{Background of (OS) Configuration}
+\label{chapter:background}
+
+\section{The Importance of Configuration}
+\label{sec:background:why_configuration_devices}
+
+Configuration is a way of making a program flexible, so it can be used in scenarios that have different requirements and are not compatible with each other, without the need to maintain multiple versions of the program that are almost identical.
+It i.e. allows hiding certain features behind a configuration flag or gives the possibility to change some internal values by exposing them via an external interface.
+
+\section{Static vs. Dynamic Configuration}
+\label{sec:background:static_vs_dynamic_configuration}
+
+Most applications use static configuration parameters to become more flexible.
+These static configuration parameters are set before the source code gets compiled to machine code and can not be changed after. They are constant values written to the program storage.
+Typical use-cases are flags to enable/disable program features or parameters to configure which pins to use for i.e.\ I²C on a hardware board.
+In the \gls{gl:riot_os}, this is typically done with the help of CFLAGS inside a Makefile \cite{gnu_make} or through Kconfig \cite{linux-kconfig-20} on more modern setups.
+The benefit of static configuration is that in cases in which a dynamic configuration has no benefit, these configuration values are less simple to accidentally being mutated by some parts of the application as they can not be changed.
+In general, every configuration parameter that does not need to be changed at runtime, as seen in the examples above, should be defined statically.
+
+For some configuration parameters though it is necessary to be able to change them at runtime. These parameters must be dynamic and not static.
+A common use-case is a ``smart'' RGB bulb. If its color value is static, it can only be changed by recompiling the program of the RGB bulb and flashing it to the RGB bulb flash storage.
+But if it is dynamic, it can be changed at runtime, without the need to recompile the whole application.
+To change runtime configuration parameters, they can be for example exposed through a \gls{ac:coap} \cite{RFC-7252} or \gls{gl:lwm2m} interface to enable external control.
+
+Static and dynamic configurations can also be mixed by dynamically switching between a set of statically defined configurations.
+For example, an application could run in ``IDLE'' or ``PERF'' mode.
+Then it can be statically defined, what CPU frequency etc. must be used for ``IDLE'' or ``PERF''. It is possible to dynamically switch between these predefined modes \cite{4253243}.
+
+\section{Benefits of an Operating System-Level Implementation}
+\label{sec:background:benefits_of_an_operating_system_level_implementation}
+
+Implementing a runtime configuration registry on an operating system level means that it can also benefit from the hardware abstractions provided by it.
+For example, if the \nameref{sec:design:riot_registry} implements a \gls{ac:coap} \gls{ac:api} to enable external access to configuration values, this \gls{ac:coap} \gls{ac:api} relies on the \gls{gl:riot_os} network stack \cite{lkhpg-cwemr-18}. This network stack is then implemented by all the different target devices supported by \gls{gl:riot_os}.
+This way the registry works on all the devices supported by \gls{gl:riot_os} and does not need to implement wrappers for every target device itself.
+
+Besides the hardware abstraction, an operating system level implementation also comes with the benefit that it can integrate with all the modules/drivers that are already provided by the operating system itself \cite{riot_drivers}.
+This way a \gls{gl:riot_os} application can just enable the registry feature and automatically get runtime configuration capabilities for all drivers or modules it depends on.
+If the registry is written on an application level, it needs to implement the drivers/modules itself and then integrate them with the registry on a per-application basis, instead of writing it once for the operating system.

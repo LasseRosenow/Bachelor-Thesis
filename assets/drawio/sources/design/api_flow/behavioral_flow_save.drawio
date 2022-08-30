@@ -1,0 +1,34 @@
+<mxfile host="65bd71144e">
+    <diagram id="fjN8D4Odn0497USpxgly" name="Page-1">
+        <mxGraphModel dx="2247" dy="779" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#FFFFFF" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="253" style="edgeStyle=elbowEdgeStyle;rounded=0;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" source="283" target="282" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-990" y="60" as="sourcePoint"/>
+                        <mxPoint x="-950" y="60" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="265" value="All configurations are saved into the storage" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="-740" y="40" width="260" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="270" value="" style="edgeStyle=elbowEdgeStyle;rounded=0;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" source="282" target="265" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-480" y="610.06" as="targetPoint"/>
+                        <mxPoint x="-720" y="60" as="sourcePoint"/>
+                        <Array as="points">
+                            <mxPoint x="-560" y="70"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="282" value="&lt;div style=&quot;text-align: left&quot;&gt;registry_export(&lt;br&gt;&lt;b&gt;&amp;nbsp; &amp;nbsp; path&lt;/b&gt;,&lt;br&gt;&amp;nbsp; &amp;nbsp; &lt;b&gt;&amp;amp;storage_facility-&amp;gt;save&lt;/b&gt;,&lt;br&gt;)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-950" y="25.75" width="170" height="68.5" as="geometry"/>
+                </mxCell>
+                <mxCell id="283" value="registry_save(&lt;b&gt;path&lt;/b&gt;)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="-1120" y="40" width="130" height="40" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

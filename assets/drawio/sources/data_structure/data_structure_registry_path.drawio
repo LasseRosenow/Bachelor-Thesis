@@ -1,0 +1,52 @@
+<mxfile host="65bd71144e">
+    <diagram id="fjN8D4Odn0497USpxgly" name="Page-1">
+        <mxGraphModel dx="646" dy="1606" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#ffffff" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="162" value="Namespace ID" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="140" y="-760" width="130" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="168" value="Registry ID" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="140" y="-720" width="130" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="169" value="Registry ID" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="140" y="-680" width="130" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="196" value="&lt;b&gt;Registry Path&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="40.5" y="-800" width="229.5" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="333" value="Array&amp;lt;Registry ID&amp;gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="140" y="-640" width="130" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="161" value="namespace_id" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="40.5" y="-760" width="99.5" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="163" value="schema_id" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="40.5" y="-720" width="99.5" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="166" value="instance_id" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="40.5" y="-680" width="99.5" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="167" value="path" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="40.5" y="-640" width="99.5" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="351" value="&lt;b&gt;&amp;lt;Enum&amp;gt;&lt;br&gt;NameSpace ID&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="310" y="-800" width="180" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="386" value="SYS = 0" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="310" y="-760" width="180" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="387" value="APP = 1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="310" y="-720" width="180" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="388" value="&lt;b&gt;Registry ID&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+                    <mxGeometry x="310" y="-640" width="180" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="389" value="uint32" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+                    <mxGeometry x="310" y="-600" width="180" height="40" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

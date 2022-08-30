@@ -1,0 +1,85 @@
+% !TEX root = ../thesis.tex
+%
+% title page
+% @author Thomas Lehmann
+% Hints for title page and page numbering: https://en.wikipedia.org/wiki/Title_page
+%
+\title{\IthesisTitle}   % set latex default title to be used by hyperref in pdf
+\author{\IthesisAuthor} % set latex default author to be used by hyperref in pdf
+
+\newpage
+\thispagestyle{empty}
+{\fontfamily{phv}\selectfont
+  \hfuzz=20pt       % suppress warnings due to extension onto page margins
+
+  % Author of thesis
+  \vspace*{1cm}
+  \begin{minipage}[b]{\textwidth}
+    \fontsize{14pt}{20pt}
+    \selectfont
+    \begin{center}
+      \IthesisAuthor
+    \end{center}
+  \end{minipage}
+
+  % Title of thesis
+  \vspace{1.5cm}
+  \begin{minipage}[b][0cm][t]{\textwidth}
+    \fontsize{18pt}{20pt}
+    \selectfont
+    \begin{center}
+      \IthesisTitleEN
+    \end{center}
+  \end{minipage}
+
+  % Important information
+  \begin{textblock*}{\textwidth}(40mm,210mm)
+    \begin{minipage}[b]{\textwidth}
+      \hbadness=10001    % suppress underfull warning due to short text
+      \fontfamily{cmr}\selectfont
+      \fontsize{12pt}{14pt}
+      \selectfont
+      \ifdefined\ILanguageEN
+        \IthesisKindEN ~submitted for examination in \IthesisExaminationEN \\
+        in the study course \textit{\IstudyCourseName} \\
+        at the \IthesisDepartmentFullEN \\
+        at the \IthesisFacultyFullEN \\
+        at University of Applied Science Hamburg\\
+
+        Supervisor: \IfirstSv \\
+        \ifdefined\IisTermPaper
+          % left blank
+        \else
+          \ifdefined\IisInternshipReport
+	  Supervised: \IsecondSv\\
+          \else
+        Supervisor: \IsecondSv \\
+          \fi\fi
+        
+        Submitted on: \ISubDate \\
+      \else
+      	\ifdefined\IisInternshipReport
+        \IthesisKindDE ~eingereicht im Rahmen des \IthesisExaminationDE \\	
+	\else
+        \IthesisKindDE ~eingereicht im Rahmen der \IthesisExaminationDE \\
+        \fi
+	im Studiengang \textit{\IstudyCourseName} \\
+        am \IthesisDepartmentFull \\
+        der \IthesisFacultyFull \\
+        der Hochschule für Angewandte Wissenschaften Hamburg\\
+
+        Betreuender Prüfer: \IfirstSv \\
+        \ifdefined\IisTermPaper
+          % left blank
+        \else
+          \ifdefined\IisInternshipReport
+        betriebliche Betreuung: \IsecondSv \\							
+	  \else
+        Zweitgutachter: \IsecondSv \\
+        \fi\fi
+
+        Eingereicht am: \ISubDate \\
+      \fi
+    \end{minipage}
+  \end{textblock*}
+}

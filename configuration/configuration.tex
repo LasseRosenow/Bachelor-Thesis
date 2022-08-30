@@ -1,0 +1,125 @@
+% !TEX root = ../thesis.tex
+%
+% configurations
+%
+
+% English Language support
+% -> uncomment if needed
+% Beta!
+\fullenglish{yes}
+%\fullenglish{no}
+
+% text field
+%-> replace supervisor names with correct ones
+\firstSupervisor{Prof. Dr. Thomas Schmidt}
+\secondSupervisor{Prof. Dr. Franz Korf}
+
+% text field
+%-> replace title with your thesis title
+\thesisTitle{Laufzeitkonfiguration von eingeschränkten Geräten über ein gemeinsames Betriebssystemmodul}
+\thesisTitleEN{Runtime configuration of constrained devices via a shared operating system module}
+
+% text field
+%-> replace the key words with your own key words
+\keywordsDE{Laufzeitkonfiguration, Eingebettete Geräte, IoT, Betriebssystem}
+\keywordsEN{Runtime Configuration, Constrained Devices, IoT, Operating System}
+
+% text field
+%-> replace the text with a description of the thesis
+\abstractDE{
+    Viele Anwendungen im Internet der Dinge (IoT) verwenden Parameter, die zur Laufzeit geändert werden müssen.
+    Typische Beispiele können Authentifizierungsdaten, die Abtastrate einer Messung oder eine LED-Farbe sein.
+    Darüber hinaus sind in modernen Industrieumgebungen Laufzeitparameter von Geräten über Plug-and-Play-fähige Protokolle wie \gls{gl:lwm2m} usw. fernveränderbar.
+
+    Gegenwärtig stellt \gls{gl:riot_os} keine \acrshort{ac:api} für Laufzeitparameter bereit.
+    Stattdessen muss jede Anwendung benutzerdefinierte, oft redundante Logik für ihren spezifischen Anwendungsfall implementieren.
+    Eine voll funktionsfähige Integration externer Konfigurationsmanager wie \gls{gl:lwm2m} erweist sich angesichts der enormen Menge an Treibern und Geräten, die für jedes einzelne Verwaltungstool unterstützt und gewartet werden müssen, als besonders schwierig.
+
+    In dieser Arbeit wird eine Konfigurationsregistrierung auf Systemebene eingeführt, mit der man Parameterwerte zur Laufzeit setzen und abzurufen kann.
+    Sie organisiert die Parameter nach einem standardisierten Schema, das Typinformationen und andere Metadaten wie Name und Beschreibungsfelder enthält, um sie anderen Modulen wie Konfigurationsmanagern zugänglich zu machen.
+    Die Parameterwerte werden optional im lokalen Speicher gehalten.
+    Um die Parameter zu ändern, werden eine CLI und Schnittstellen zu \acrshort{ac:coap}, \gls{gl:mqtt} und \gls{gl:lwm2m} spezifiziert.
+    Darüber hinaus werden in dieser Arbeit wichtige Entscheidungen zum \acrshort{ac:api}-Design diskutiert und erläutert, warum standardisierte, modulunabhängige Schemata für gemeinsame Konfigurationsparameter für die Integration von externen Management-Tools wie \gls{gl:lwm2m} notwendig sind.
+}
+\abstractEN{
+    Many applications on the Internet of Things (IoT) use parameters that need to be changed at runtime.
+    Typical examples can be authentication credentials, the sampling rate of a measurement or an LED color.
+    Furthermore in modern industrial spaces runtime parameters of devices are remotely changeable using plug-and-play capable protocols such as \gls{gl:lwm2m} etc.
+
+    As of today, \gls{gl:riot_os} does not provide an \acrshort{ac:api} for runtime parameters.
+    Instead, each application needs to implement custom, often redundant logic for its specific use case.
+    A fully featured integration of external \glspl{gl:configuration_manager} such as \gls{gl:lwm2m} proves to be particularly difficult given the vast amount of drivers and devices that need to be supported and maintained for every single management tool.
+
+    In this thesis we introduce a system-level configuration registry that allows for setting and getting configuration parameter values at runtime.
+    It organizes parameters according to a standardized schema that includes type information and other metadata such as name and description fields to make them accessible to other modules such as \glspl{gl:configuration_manager}.
+    The parameter values are optionally persisted on local storage.
+    To change the parameters we specify a CLI and interfaces to \acrshort{ac:coap}, \gls{gl:mqtt} and \gls{gl:lwm2m}.
+    Furthermore, we discuss important \acrshort{ac:api} design decisions and explain why standardized, module-independent schemas for common configuration parameters are essential for the integration of external management tools such as \gls{gl:lwm2m}.
+}
+
+% text field
+%-> replace john with your name
+\thesisAuthor{Lasse Jonas Rosenow}
+
+% text field
+%-> enter the submission date
+\submissionDate{February 1, 2023}
+
+% switch - uncomment only one
+%-> uncomment NDA or public
+%\NDA{yes}
+\NDA{no}
+
+% switch - uncomment only one
+%-> uncomment old standard cover or cover Corporate Design 2017
+\Cover{CD2017}
+%\Cover{CD2017NoLogo}
+%\Cover{Std2018}
+%\Cover{Std2018_green} 			% with green bar
+
+% switch - uncomment only one
+%-> uncomment to show list of figures or not
+\ListOfFigures{yes}
+%\ListOfFigures{no}
+
+% switch - uncomment only one
+%-> uncomment to show list of tables or not
+\ListOfTables{yes}
+%\ListOfTables{no}
+
+% switch - uncomment only one
+%-> uncomment to show list of listings or not
+\ListOfListings{yes}
+%\ListOfListings{no}
+
+% switch - uncomment only one
+%-> uncomment to show list of acronyms or not
+\ListOfAccronyms{yes}
+%\ListOfAccronyms{no}
+
+% switch - uncomment only one
+%-> uncomment to show list of symbols or not
+\ListOfSymbols{yes}
+%\ListOfSymbols{no}
+
+% switch - uncomment only one
+%-> uncomment to show list of glossary entries or not
+\Glossary{yes}
+%\Glossary{no}
+
+% switch - uncomment only one
+%-> uncomment the study course you are in
+\studycourse{ITS}
+%\studycourse{TI}
+%\studycourse{AI}
+%\studycourse{WI}
+%\studycourse{EI}
+%\studycourse{REE}
+%\studycourse{BMP}		
+%\studycourse{BMP-hp}	 % Internship Report in M&P
+%\studycourse{BMT}
+%\studycourse{BMT-st}    % Study / home assignment in BMT
+%\studycourse{BMT-hp}    % Internship Report in BMT
+%\studycourse{MI}
+%\studycourse{MIK}
+%\studycourse{MA}

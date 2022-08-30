@@ -1,0 +1,61 @@
+\chapter{Future Work}
+\label{chapter:future_work}
+
+\section{Full Test Coverage}
+
+As mentioned in \ref{chapter:testing}, the currently implemented tests don't have the highest test coverage yet.
+In the future the unit tests of the \nameref{sec:design:riot_registry} should be extended to find and prevent more implementation mistakes.
+
+\section{Exposing Configuration Parameters Beyond Abstraction}
+
+Investigate how to expose custom config data beyond abstraction:
+Some sensors have very specific configuration parameters that can not all be sufficiently abstracted through one large interface.
+Possible solutions:
+
+\begin{itemize}
+    \item Implement custom \gls{ac:cs} for these sensors.
+
+    \item Expose those parameters through a field in every \gls{ac:cs} that can hold additional parameters and is not type-safe.
+          Set, Get handlers and persistence must be implemented by the driver itself and not the \gls{ac:cs} in this case.
+\end{itemize}
+
+\section{Extend Configuration Parameter Value Constraints}
+
+Investigate how to expose further value constraints of configuration parameters.
+Configuration parameters, in the case of numbers, usually for example don't expect the full range that the size of a primitive c-type (8, 16, 32 or 64-bit) allows.
+In some cases maybe even only a certain set of specifically selected values is a correct configuration value.
+There should be a way to specify how to expose those constraints through the Registry \gls{ac:api} through additional metadata fields.
+Possible use-cases:
+
+\begin{itemize}
+    \item Constrain the minimum and maximum value of a numeric configuration parameter.
+
+    \item Constrain the minimum and maximum length of a (string) configuration parameter.
+
+    \item Specifies a set of values that are allowed to be set.
+          This gives the possibility to implicitly define an ``enum'' like configuration parameter.
+\end{itemize}
+
+\section{External \gls*{gl:configuration_manager} Implementation}
+
+This thesis only specifies the architectural design of how \gls{ac:coap}, \gls{gl:mqtt} and \gls{gl:lwm2m} can be used to implement external \glspl{gl:configuration_manager} for the \gls{gl:riot_os} and only implements a \gls{ac:cli} for external configuration management (see \autoref{sec:design:integrating_external_configuration_managers:simple_configuration_managers:cli}).
+Those integrations still need to be implemented.
+
+\begin{itemize}
+    \item \gls{ac:coap} based \gls{ac:api} (uses registry structure).
+
+    \item \gls{gl:mqtt} based \gls{ac:api} (uses registry structure).
+
+    \item \gls{gl:lwm2m} mapping (\nameref{sec:design:riot_registry} => \gls{gl:lwm2m} Object Models).
+\end{itemize}
+
+\section{Specification of Sys \acrlongpl*{ac:cs}}
+\label{sec:future_work:specification_of_schemas_for_common_use_cases}
+
+As of now the \nameref{sec:design:riot_registry} only comes with two simple example \glspl{ac:cs} in its ``sys'' \gls{ac:cn}, one being an LED-RGB \gls{ac:cs} to control the color of an rgb LED, and the other being a \gls{ac:cs} with the name ``full\_example'' that contains all supported parameter types for testing.
+To give modules/drivers the ability to implement \glspl{ac:cs}, first those \glspl{ac:cs} must be defined.
+This is no simple task as each \gls{ac:cs} must be specified in a way that is compatible to as many as possible drivers of the same kind.
+
+\section{Integration of the \nameref*{sec:design:riot_registry} into \gls*{gl:riot_os} Modules and Drivers.}
+
+After a \gls{ac:cs} is specified as explained in \autoref{sec:future_work:specification_of_schemas_for_common_use_cases}, it has to be implemented by the compatible modules/drivers that need runtime configuration.

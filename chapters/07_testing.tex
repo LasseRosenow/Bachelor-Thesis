@@ -1,0 +1,45 @@
+\chapter{Testing of the Implementation's Correctness}
+\label{chapter:testing}
+
+The ``registry\_tests'' module provides unit tests that can be run by including the ``registry\_tests.h'' header file and calling the ``registry\_tests\_api\_run'' function.
+
+\section{Test Setup}
+
+To be able to test if all by the \nameref{sec:design:riot_registry} supported data types are supported, the ``registry\_tests'' module uses the ``registry\_schema\_full\_example'' of the ``registry\_schemas'' module.
+This \gls{ac:cs} contains fields for every supported data type of the \nameref{sec:design:riot_registry} (see \autoref{sec:requirements:typed_configuration_parameters} and \autoref{fig:riot_registry_configuration_parameter_type_enum}).
+Additionally the module creates and registers a custom \gls{ac:cs} called ``registry\_schema\_groups\_test'', which consists of 4 \glspl{ac:cg}, that are children of each other, creating a maximum \gls{ac:cp} of up to 5 segments excluding the \gls{ac:cn}, \gls{ac:cs} and \gls{ac:si}.
+This is necessary to test if the \glspl{ac:cg} are implemented correctly.
+
+\section{Testing the ``registry\_get'' and ``registry\_set'' Functions}
+\label{sec:testing:get_and_set}
+
+To test the correctness of the ``registry\_get'' and ``registry\_set'' functions of the \nameref{sec:design:riot_registry}, first we call the ``registry\_set'' function for all fields of the ``registry\_schema\_full\_example'' \gls{ac:cs} and also for all fields of the ``registry\_schema\_groups\_test'' \gls{ac:cs} to test every data type that is supported by the \nameref{sec:design:riot_registry} and also if \glspl{ac:cg} work.
+Then we call the ``registry\_get'' function for all previously set parameters and compare the returning values to the original values.
+If these values match, the test is successful.
+This testing sequence is executed for the minimum and maximum value for each configuration parameter.
+
+\section{Testing the ``registry\_commit'' Function}
+
+To test the correctness of the ``registry\_commit'' function of the \nameref{sec:design:riot_registry}, first we create a global bool and initialize it to ``false''. Then we call the ``registry\_commit'' function providing a \gls{ac:cp} as an argument that points to a configuration parameter of a \gls{ac:si}, which in its callback function checks, if the provided values are matching to what is expected. It then changes the value of the global bool to ``true'' if the values are correct and to ``false'' if they are not.
+If the value is set to ``true'', the test is successful.
+
+Ideally this test is not only implemented for calling a concrete configuration parameter of a \gls{ac:si}, but also for calling incomplete \glspl{ac:cp}, such as a \gls{ac:cp} that only points to the \gls{ac:cs} or one that only points to the \gls{ac:si}.
+In both cases the configuration parameter must be committed because its parent got committed.
+These tests are not yet implemented.
+
+\section{Testing the ``registry\_export'' Function}
+
+To test the correctness of the ``registry\_export'' function of the \nameref{sec:design:riot_registry}, first we create a global bool and initialize it to ``false''. Then we call the ``registry\_export'' function providing a \gls{ac:cp} that points to a configuration parameter and a custom callback function as its arguments. When the callback function gets called, it checks if the provided values are matching to what is expected. It then changes the value of the global bool to ``true'' if the values are correct and to ``false'' if they are not.
+If the value is set to ``true'', the test is successful.
+
+Ideally this test is not only implemented for calling a concrete configuration parameter of a \gls{ac:si}, but also for calling incomplete \glspl{ac:cp}, such as a \gls{ac:cp} that only points to the \gls{ac:cs} or one that only points to the \gls{ac:si}.
+In these cases it depends on the ``recursion'' argument, how deep the ``registry\_export'' function searches inside the \gls{ac:cs} for configuration parameters to export.
+These tests are not yet implemented.
+
+\section{Testing the ``registry\_save'' and ``registry\_load'' Function}
+
+To test the ``registry\_save'' and ``registry\_load'' functions, every test that is done in \ref{sec:testing:get_and_set} gets executed again, but this time after each sequence we call the ``registry\_save'' function to write the values to the storage.
+Then all previously set configuration parameters get changed to a different value using the ``registry\_set'' function.
+And finally we call the ``registry\_load'' function to read the values written to storage and loading them into the \nameref{sec:design:riot_registry} again.
+If these values now match with the values that were initially set by the ``registry\_set'' function,
+then the test is successful.

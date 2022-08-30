@@ -1,0 +1,81 @@
+<mxfile host="65bd71144e">
+    <diagram id="fjN8D4Odn0497USpxgly" name="Page-1">
+        <mxGraphModel dx="2283" dy="777" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="#FFFFFF" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="444" value="&lt;font style=&quot;font-size: 17px&quot;&gt;RIOT Device 7&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;horizontal=0;align=center;verticalAlign=bottom;spacingBottom=22;" parent="1" vertex="1">
+                    <mxGeometry x="-1150" y="280" width="430" height="250" as="geometry"/>
+                </mxCell>
+                <mxCell id="406" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+                    <mxGeometry x="-1140" y="290" width="270" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="407" value="" style="points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image;image=img/lib/allied_telesis/storage/Datacenter_Server_Half_Rack_ToR.svg;" parent="1" vertex="1">
+                    <mxGeometry x="-1100.84" y="50" width="120.83" height="157" as="geometry"/>
+                </mxCell>
+                <mxCell id="408" value="&lt;span style=&quot;font-size: 13px&quot;&gt;device_7 / sys / rgb_led / 0 / red -&amp;gt; 27&lt;/span&gt;" style="edgeStyle=elbowEdgeStyle;rounded=0;html=1;" parent="1" source="407" target="426" edge="1">
+                    <mxGeometry x="-0.064" y="20" relative="1" as="geometry">
+                        <mxPoint x="-1490" y="120" as="sourcePoint"/>
+                        <mxPoint x="-1300" y="350" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="-1030" y="250"/>
+                            <mxPoint x="-1400" y="320"/>
+                            <mxPoint x="-1520" y="320"/>
+                        </Array>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="413" value="&lt;font style=&quot;font-size: 17px&quot;&gt;RIOT Registry&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="-1140" y="460" width="350" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="414" value="&lt;font style=&quot;font-size: 13px&quot;&gt;&lt;font style=&quot;font-size: 13px&quot;&gt;registry_set_uint8([0, 4, 0, 0], 27)&lt;br&gt;&lt;/font&gt;&lt;/font&gt;" style="edgeStyle=elbowEdgeStyle;rounded=0;html=1;" parent="1" source="426" edge="1">
+                    <mxGeometry x="0.3333" relative="1" as="geometry">
+                        <mxPoint x="-1030.01" y="460" as="targetPoint"/>
+                        <mxPoint as="offset"/>
+                        <mxPoint x="-1020" y="490" as="sourcePoint"/>
+                        <Array as="points">
+                            <mxPoint x="-1030" y="480"/>
+                            <mxPoint x="-980" y="430"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="421" value="" style="group" parent="1" vertex="1" connectable="0">
+                    <mxGeometry x="-1010" y="384" width="170" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="423" value="" style="endArrow=none;html=1;fontSize=9;fontColor=#999999;strokeColor=#999999;strokeWidth=0.5;" parent="421" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="31" y="27" as="sourcePoint"/>
+                        <mxPoint x="33" y="21" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="422" value="&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34; ; font-style: normal ; font-weight: 400 ; letter-spacing: normal ; text-align: center ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; display: inline ; float: none&quot;&gt;&lt;font style=&quot;font-size: 9px&quot; color=&quot;#999999&quot;&gt;SYS / rgb_led / Instance 0 / red&lt;/font&gt;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;fillColor=none;" parent="421" vertex="1">
+                    <mxGeometry width="170" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="424" value="MQTT Client" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;horizontal=0;" parent="1" vertex="1">
+                    <mxGeometry x="-870" y="290" width="80" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="426" value="&lt;font color=&quot;#000000&quot; style=&quot;font-size: 13px&quot;&gt;receive&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=none;fontSize=17;" parent="1" vertex="1">
+                    <mxGeometry x="-1070.01" y="310" width="80" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="437" value="" style="points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image;image=img/lib/allied_telesis/computer_and_terminals/Personal_Computer.svg;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="-768.06" y="57" width="118.06" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="439" value="&lt;span style=&quot;font-size: 13px&quot;&gt;device_7 / sys / rgb_led / 0 / red -&amp;gt; 27&lt;/span&gt;" style="edgeStyle=elbowEdgeStyle;rounded=0;html=1;" parent="1" source="437" target="407" edge="1">
+                    <mxGeometry x="-0.1" y="-11" relative="1" as="geometry">
+                        <mxPoint x="-1020" y="224" as="sourcePoint"/>
+                        <mxPoint x="-1020" y="310" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="-890" y="140"/>
+                            <mxPoint x="-1390" y="330"/>
+                            <mxPoint x="-1510" y="330"/>
+                        </Array>
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="441" value="&lt;span style=&quot;color: rgb(0, 0, 0); font-family: helvetica; font-size: 13px; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: center; text-indent: 0px; text-transform: none; word-spacing: 0px; background-color: rgb(255, 255, 255); display: inline; float: none;&quot;&gt;MQTT Broker&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-1080.01" y="20" width="100" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
